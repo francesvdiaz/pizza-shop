@@ -69,11 +69,12 @@ Pizza.prototype.submitForm = function(event) {
   event.preventDefault();
   this.createPizza();
 
+  const orderDetails = document.getElementById("order-details");
+  orderDetails.innerHTML = "";
   const pizzaDiv = document.createElement("div");
   const pizzaDetails = `Crust: ${this.crust}, Size: ${this.size}, Toppings: ${this.toppings.join(", ")}, Price: $${this.price.toFixed(2)}`;
   pizzaDiv.innerText = pizzaDetails;
-  
-  const orderDetails = document.getElementById("order-details");
+ 
   orderDetails.appendChild(pizzaDiv);
 };
 
