@@ -1,0 +1,29 @@
+body {
+  background-color: rgb(73, 72, 68);
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#form {
+  background-color: rgb(66, 60, 53);
+  color: antiquewhite;
+  width: 60%;
+  height: auto;
+  margin: auto;
+  border: 0 0 0 2px solid;
+  padding: 15px;
+}
+
+#title {
+  color: rgb(251, 248, 240);
+  padding: 15px;
+}
+
+#order-details {
+  color: antiquewhite;
+  width: 60%;
+  height: auto;
+  margin: auto;
+  border: 0 0 0 2px solid;
+  padding: 15px;
+}

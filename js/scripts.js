@@ -74,6 +74,7 @@ Pizza.prototype.submitForm = function(event) {
   const pizzaDiv = document.createElement("div");
   const pizzaDetails = `Crust: ${this.crust}, Size: ${this.size}, Toppings: ${this.toppings.join(", ")}, Price: $${this.price.toFixed(2)}`;
   pizzaDiv.innerText = pizzaDetails;
+  pizzaDiv.style.backgroundColor = "#423F35";
  
   orderDetails.appendChild(pizzaDiv);
 };
