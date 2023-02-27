@@ -4,9 +4,18 @@ body {
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+#title {
+  color: rgb(251, 248, 240);
+  padding: 15px;
+}
+
 #menu {
   color:rgb(159, 210, 227);
   padding: 15px;
+}
+
+h5 {
+  color: #d5d5d5;
 }
 
 #pricing {
@@ -30,15 +39,22 @@ body {
 }
 
 select {
-  background-color: slategrey;
-  color:antiquewhite;
+  background-color: rgb(240, 238, 228);
+  color:rgb(74, 74, 74);
+  border-radius: 5px;
 }
 
+input[type="checkbox"] {
+  background-color: #d5d5d5;
+  color: rgb(245, 231, 213);
+  border-radius: 5px;
+  cursor: pointer;
+  align-items: center;
+}
 
-
-#title {
-  color: rgb(251, 248, 240);
-  padding: 15px;
+#button {
+  border-radius: 5px;
+  background-color: rgb(240, 238, 228)
 }
 
 #order-details {
