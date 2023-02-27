@@ -4,6 +4,21 @@ body {
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+#menu {
+  color:rgb(159, 210, 227);
+  padding: 15px;
+}
+
+#pricing {
+  background-color: rgb(66, 60, 53);
+  color: antiquewhite;
+  width: 60%;
+  height: auto;
+  margin: auto;
+  border: 0 0 0 2px solid;
+  padding: 15px;
+}
+
 #form {
   background-color: rgb(66, 60, 53);
   color: antiquewhite;
@@ -13,6 +28,13 @@ body {
   border: 0 0 0 2px solid;
   padding: 15px;
 }
+
+select {
+  background-color: slategrey;
+  color:antiquewhite;
+}
+
+
 
 #title {
   color: rgb(251, 248, 240);

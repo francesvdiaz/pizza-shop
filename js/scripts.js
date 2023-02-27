@@ -2,7 +2,6 @@ function Pizza(size, crust) {
   this.crust = crust;
   this.toppings = [];
   this.size = size;
-  this.price = 0;
 };
 
 Pizza.prototype.createPizza = function() {
@@ -15,9 +14,6 @@ Pizza.prototype.createPizza = function() {
   this.size = size;
 
   this.calculateCost();
-  
-  console.log(this);
-  console.log("Price: $" + this.price.toFixed(2));
 };
 
 Pizza.prototype.calculateCost = function() {
@@ -49,6 +45,14 @@ Pizza.prototype.calculateCost = function() {
         break;  
     };
   });
+  switch (this.crust) {
+    case "Stuffed Crust":
+      price += 4;
+      break;
+    case "Mal's Special Crust":
+      price += 4;  
+      break;
+  };
   switch (this.size) {
     case "10in":
       price += 10;
@@ -68,15 +72,18 @@ Pizza.prototype.calculateCost = function() {
 Pizza.prototype.submitForm = function(event) {
   event.preventDefault();
   this.createPizza();
-
-  const orderDetails = document.getElementById("order-details");
-  orderDetails.innerHTML = "";
+  const orderDetails = document.createElement("h3");
+  orderDetails.innerText = "";
+  const output = document.getElementById("order-details");
+  output.innerHTML = "";
   const pizzaDiv = document.createElement("div");
-  const pizzaDetails = `Crust: ${this.crust}, Size: ${this.size}, Toppings: ${this.toppings.join(", ")}, Price: $${this.price.toFixed(2)}`;
+  const pizzaDetails = `Crust: ${this.crust}, 
+  Size: ${this.size}, 
+  Toppings: ${this.toppings.join(", ")}, 
+  Price: $${this.price.toFixed(2)}`;
   pizzaDiv.innerText = pizzaDetails;
   pizzaDiv.style.backgroundColor = "#423F35";
- 
-  orderDetails.appendChild(pizzaDiv);
+  output.appendChild(pizzaDiv);
 };
 
 window.addEventListener("DOMContentLoaded", function() {
